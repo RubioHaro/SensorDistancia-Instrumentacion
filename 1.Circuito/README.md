@@ -1,0 +1,3 @@
+# Circuito del Proyecto
+
+Se diseño un circuito que permite medir la distancia, mediante el uso de resistencias, conformando un sensor resistivo.... 

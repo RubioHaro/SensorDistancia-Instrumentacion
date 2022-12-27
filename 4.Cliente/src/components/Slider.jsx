@@ -6,7 +6,7 @@ import Slider from '@mui/material/Slider';
 import { Straighten } from '@mui/icons-material';
 import { Button } from '@mui/material';
 // import { fontSize } from '@mui/system';
-import { bintodec, calculo } from './../lib/main';
+import { bintodec, calculo } from '../lib/main';
 
 export default function InputSlider() {
     // create a react state variable
