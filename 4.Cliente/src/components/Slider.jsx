@@ -6,7 +6,7 @@ import Slider from '@mui/material/Slider';
 import { Straighten } from '@mui/icons-material';
 import { Button } from '@mui/material';
 // import { fontSize } from '@mui/system';
-import { bintodec, calculo } from '../lib/main';
+import { calculo } from '../lib/main';
 
 export default function InputSlider() {
     // create a react state variable
@@ -16,7 +16,7 @@ export default function InputSlider() {
     const [vsen, setVsen] = React.useState(0);
     const [rsen, setRsen] = React.useState(0);
     const [distanciaCaculada, setDistanciaCaculada] = React.useState(0);
-    
+
     const [showDetails, changeShowDetails] = React.useState(false);
 
 
@@ -25,20 +25,34 @@ export default function InputSlider() {
         let parsed_string = event.data.slice(1, -3);
         console.log("event data:" + parsed_string);
 
-        let parsed_value = bintodec(parsed_string) / 100; // PROBABLEMENTE HAY QUE CAMBIAR ESTO!!!!!!!!!!1
-        
-        if (parsed_value >= 0 && parsed_value <= 4) {
-            setDistance(parsed_value);
-            console.log("actualizando valores de detalles");
-            let calculos = calculo(parsed_string);
-            console.log(calculos);
-            setVres(calculos[0]);
-            setVsal(calculos[1]);
-            setVsen(calculos[2]);
-            setRsen(calculos[3]);
-            setDistanciaCaculada(calculos[4]);
-
+        console.log("inviertiendo bits: " + parsed_string);
+        const invert_bits = true;
+        if(parsed_string != "00000000" && parsed_string != "11111111"){
+            if (invert_bits) {
+                parsed_string = parsed_string.split('').map((c) => {
+                    return c === '1' ? '0' : '1';
+                }).join('');
+    
+                console.log("bits invertidos: " + parsed_string);
+    
+                console.log("actualizando valores de detalles");
+                let calculos = calculo(parsed_string);
+                console.log(calculos);
+                setVres(calculos[0]);
+                setVsal(calculos[1]);
+                setVsen(calculos[2]);
+                setRsen(calculos[3]);
+                setDistanciaCaculada(calculos[4]);
+                setDistance(calculos[4]);
+            }
         }
+        
+    }
+
+    function invertBits(string) {
+        return string.split('').map((c) => {
+            return c === '1' ? '0' : '1';
+        }).join('');
     }
 
     function handleDetails() {
