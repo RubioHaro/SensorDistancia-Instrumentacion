@@ -49,12 +49,6 @@ export default function InputSlider() {
         
     }
 
-    function invertBits(string) {
-        return string.split('').map((c) => {
-            return c === '1' ? '0' : '1';
-        }).join('');
-    }
-
     function handleDetails() {
         changeShowDetails(!showDetails);
         let buttonDetails = document.getElementById('buttonDetails');

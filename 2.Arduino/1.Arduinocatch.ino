@@ -1,25 +1,46 @@
-//Arreglos de los pines utilizados
-const byte pin[]= {2,3,4,5,6,7,8,9}; 
-//Declaramos un byte que aumentara de acuerdo a la letura de bits por eso 
-//se declaro un byte para que solo pueda guardar 8 bits
-byte estado = 0;
+// Arreglos de los pines utilizados
+const byte pin[] = {2, 3, 4, 5, 6, 7, 8, 9};
+// Declaramos un byte que aumentara de acuerdo a la letura de bits por eso
+// se declaro un byte para que solo pueda guardar 8 bits
+// arreglo de bits 
 
-void setup() {
-  //Declaramos los pines como entrada en un ciclo for
+
+void setup()
+{
+  // Declaramos los pines como entrada en un ciclo for
+  pinMode(LED_BUILTIN, OUTPUT);
   Serial.begin(9600);
-  for (int i=0; i<8; i++) {
-        pinMode(pin[i], INPUT); 
+  Serial.println("Hello World!");
+
+  Serial.begin(9600);
+  for (int i = 0; i < 8; i++)
+  {
+    pinMode(pin[i], INPUT);
   }
 }
 
+void loop()
+{
+  int pins[8];
+  // Leemos los pines con un for
+  pins[0] = digitalRead(pin[0]);
+  pins[1] = digitalRead(pin[1]);
+  pins[2] = digitalRead(pin[2]);
+  pins[3] = digitalRead(pin[3]);
+  pins[4] = digitalRead(pin[4]);
+  pins[5] = digitalRead(pin[5]);
+  pins[6] = digitalRead(pin[6]);
+  pins[7] = digitalRead(pin[7]);
 
-void loop() {
-  //Leemos los pines con un for
-  for (int i=1; i<=8; i++) {
-        //(pin[i-1]) & (1<<i) Esto hara que se haga una comparacion AND bit por bit en la posicion del bit indicado
-        //Despues al resultado se le hara una comparacion bit a bit de tipo or que se guardara en estado
-        estado |= digitalRead(pin[i-1]) & (1<<i);
-  }
-  Serial.println(estado);
-  delay(500);   
+  // imprimiento los bits en una sola linea
+  Serial.print(pins[0]);
+  Serial.print(pins[1]);
+  Serial.print(pins[2]);
+  Serial.print(pins[3]);
+  Serial.print(pins[4]);
+  Serial.print(pins[5]);
+  Serial.print(pins[6]);
+  Serial.print(pins[7]);
+  Serial.println();
+  delay(1500);
 }
