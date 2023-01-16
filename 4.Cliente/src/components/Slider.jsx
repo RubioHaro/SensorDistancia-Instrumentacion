@@ -25,8 +25,7 @@ export default function InputSlider() {
         let parsed_string = event.data.slice(1, -3);
         console.log("event data:" + parsed_string);
 
-        console.log("inviertiendo bits: " + parsed_string);
-        const invert_bits = true;
+        const invert_bits = false;
         if(parsed_string != "00000000" && parsed_string != "11111111"){
             if (invert_bits) {
                 parsed_string = parsed_string.split('').map((c) => {
@@ -35,16 +34,16 @@ export default function InputSlider() {
     
                 console.log("bits invertidos: " + parsed_string);
     
-                console.log("actualizando valores de detalles");
-                let calculos = calculo(parsed_string);
-                console.log(calculos);
-                setVres(calculos[0]);
-                setVsal(calculos[1]);
-                setVsen(calculos[2]);
-                setRsen(calculos[3]);
-                setDistanciaCaculada(calculos[4]);
-                setDistance(calculos[4]);
             }
+            console.log("actualizando valores de detalles");
+            let calculos = calculo(parsed_string);
+            console.log(calculos);
+            setVres(calculos[0]);
+            setVsal(calculos[1]);
+            setVsen(calculos[2]);
+            setRsen(calculos[3]);
+            setDistanciaCaculada(calculos[4]);
+            setDistance(calculos[4]);
         }
         
     }
@@ -74,13 +73,13 @@ export default function InputSlider() {
                     <Button id='buttonDetails' onClick={handleDetails}>ver detalles</Button>
                     <div id='detalles'>
                         {showDetails &&
-                            <h5>
+                            <h6>
                                 Voltaje Resolucion: {vres} V <br />
                                 Voltaje de Salida: {vsal} V <br />
                                 Voltaje del Sensor: {vsen} V <br />
                                 Resistencia del Sensor: {rsen} ohms <br />
                                 Distancia Calculada: {distanciaCaculada} cm <br />
-                            </h5>
+                            </h6>
                         }
                     </div>
                 </Grid>
@@ -88,11 +87,12 @@ export default function InputSlider() {
             <Grid container alignItems="center">
                 <Grid item xs>
                     <Slider
-                        value={typeof distance === 'number' ? distance : 0}
+                        value={distance}
                         aria-labelledby="input-slider"
                         color="secondary"
                         step={0.1}
                         max={4}
+                        min={0}
                     />
                 </Grid>
 
