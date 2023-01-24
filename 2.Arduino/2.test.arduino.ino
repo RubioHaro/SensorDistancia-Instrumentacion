@@ -21,14 +21,40 @@ void loop() {
 
 // create a function thar sends a message to the serial port
 void sayHello() {
-  generate8BitsString();
 
+ if(Serial.available() > 0 ){
+      char Dato = Serial.read();
+      if(Dato == '1')   
+        generate8BitsString()
+      else if(Dato == '2') 
+        generateOnes();
+      else if(Dato == '3')
+        generateCeros();
+
+  }
 }
 
 void generate8BitsString() {
   String bits = "";
   for (int i = 0; i < 8; i++) {
     bits += random(0, 2);
+  }
+  Serial.println(bits);
+}
+
+
+void generateOnes(){
+  String bits = "";
+  for (int i = 0; i < 8; i++) {
+    bits += 1;
+  }
+  Serial.println(bits);
+}
+
+void generateCeros(){
+  String bits = "";
+  for (int i = 0; i < 8; i++) {
+    bits += 0;
   }
   Serial.println(bits);
 }

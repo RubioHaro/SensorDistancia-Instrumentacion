@@ -51,9 +51,10 @@ const selectPort = async () => {
     }
 };
 
+let port_in_use
 
 selectPort().then((port) => {
-
+    port_in_use = port;
     // console.log(`Enlace Generado ${port}`);
     // console.log(port);
 
@@ -73,8 +74,12 @@ selectPort().then((port) => {
     port.on('error', function (err) {
         console.log(err);
     });
-
 });
 
+function changeSelection(selected) {
+    console.log("selected: " + selected);
+    port_in_use.write(selected);
+}
 
-module.exports = sse;
+
+module.exports = {sse, changeSelection};

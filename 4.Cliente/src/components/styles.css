@@ -1,0 +1,320 @@
+/*boton 1*/
+.btn-neon1{
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: #000;
+    letter-spacing: 4px;
+    text-decoration: none;
+    font-size: 24px;
+    overflow: hidden;
+    transition: 0.2s;
+}
+.btn-neon1:hover{
+    background: #17ff2a;
+    box-shadow: 0 0 10px #17ff2a, 0 0 40px #17ff2a, 0 0 80px #17ff2a;
+    transition-delay: 1s;
+ }
+.btn-neon1 span{
+    position: absolute;
+    display: block;
+}
+#span1{
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent,#17ff2a);
+ }
+ .btn-neon1:hover #span1{
+    left: 100%;
+    transition: 1s;
+}
+ #span3{
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent,#17ff2a);
+}#a945c
+ .btn-neon1:hover #span3{
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+}
+#span2{
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,#17ff2a);
+}
+.btn-neon1:hover #span2{
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+}
+#span4{
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,#17ff2a);
+}
+.btn-neon1:hover #span4{
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75s;
+}
+
+/*boton 2*/
+.btn-neon2{
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: #000;
+    letter-spacing: 4px;
+    text-decoration: none;
+    font-size: 24px;
+    overflow: hidden;
+    transition: 0.2s;
+}
+.btn-neon2:hover{
+    background: #339cff;
+    box-shadow: 0 0 10px #339cff, 0 0 40px #339cff, 0 0 80px #339cff;
+    transition-delay: 1s;
+ }
+.btn-neon2 span{
+    position: absolute;
+    display: block;
+}
+#span5{
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent,#339cff);
+ }
+ .btn-neon2:hover #span5{
+    left: 100%;
+    transition: 1s;
+}
+ #span7{
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent,#339cff);
+}#a945c
+ .btn-neon2:hover #span7{
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+}
+#span6{
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,#339cff);
+}
+.btn-neon2:hover #span6{
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+}
+#span8{
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,#339cff);
+}
+.btn-neon2:hover #span8{
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75s;
+}
+
+/*boton 3*/
+.btn-neon3{
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: #000;
+    letter-spacing: 4px;
+    text-decoration: none;
+    font-size: 24px;
+    overflow: hidden;
+    transition: 0.2s;
+}
+.btn-neon3:hover{
+    background: #e0ff33;
+    box-shadow: 0 0 10px #e0ff33, 0 0 40px #e0ff33, 0 0 80px #e0ff33;
+    transition-delay: 1s;
+ }
+.btn-neon3 span{
+    position: absolute;
+    display: block;
+}
+#span9{
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent,#e0ff33);
+ }
+ .btn-neon3:hover #span9{
+    left: 100%;
+    transition: 1s;
+}
+ #span11{
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent,#e0ff33);
+}#a945c
+ .btn-neon3:hover #span11{
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+}
+#span10{
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,#e0ff33);
+}
+.btn-neon3:hover #span10{
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+}
+#span12{
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,#e0ff33);
+}
+.btn-neon3:hover #span12{
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75s;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    /*display: flex;*/
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #1a0321;
+    font-family:consolas;
+    color: rgb(251, 251, 251);
+}
+
+.wrapper {
+    text-align:center;
+    width:300px;
+    height:200px;
+    position:relative;
+}
+.wrapper>div:first-child {
+    border:1px solid #1a0321;
+    position:relative;
+    height:150px;
+    overflow:hidden;
+}
+.wrapper .line {
+    display:inline-block;
+    position:absolute;
+    z-index:-1;
+
+    width:4px;
+    background-color:#ff0000;
+    transform: rotate(90deg);
+    transition: all 0.8s ease-out;
+    height:200px;
+    top:12%
+}
+.wrapper .line::after {
+    position: absolute;
+    content:"";
+    top:0%;
+    left:-3px;
+    bottom:50%;
+    right:-3px;
+    background-color:rgb(255, 0, 0);
+}
+.number {
+    width:20px;
+    left:140px;
+    height:240px;
+    display:inline-block;
+    position:absolute;
+    z-index:-1;
+}
+.number.n0 {
+    transform: rotate(-90deg);
+    bottom:-80px;
+}
+.number.n25 {
+    transform: rotate(-45deg);
+}
+.number.n75 {
+    transform: rotate(45deg);
+}
+.number.n180 {
+    transform: rotate(90deg);
+    bottom:-80px;
+}
+.circle1 {
+    position:absolute;
+    background-color:#ff0000;
+    top:72%;
+    left:calc(50% - 8px);
+    width:20px;
+    height:20px;
+    border-radius:50% 50%;
+}
+.circle2 {
+    position:absolute;
+    top:24px;
+    left:calc(150px - 95px);
+    width:190px;
+    height:190px;
+    border-radius:50% 50% 0 0;
+    z-index:-2;
+    background: linear-gradient(to right, #31f859, #fc972b);
+}
+.circle2::after {
+    position:absolute;
+    content:"";
+    height:50%;
+    background-Color:#fff;
+    top:92px;
+    left:0;
+    width:101%;
+}
+.circle2::before {
+    position:absolute;
+    content:"";
+    top:20px;
+    left:20px;
+    background-Color:#fff;
+    height:calc(100% - 40px);
+    width:calc(100% - 40px);
+    border-radius:50% 50% 0 0;
+}
+
+.scroll {
+    overflow-x:auto;
+}
+.scroll>div {
+    width:1000px;
+    height:1px;
+}
